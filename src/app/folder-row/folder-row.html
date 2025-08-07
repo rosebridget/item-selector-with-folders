@@ -1,1 +1,69 @@
-<p>folder-row works!</p>
+<div class="folder" [style.padding-left.px]="level * 20">
+  <!-- folder title and svg arrow -->
+  <div class="folder-row" (click)="toggleExpand()">
+    <div class="folder-title">
+      <input
+        #folderCheckbox
+        type="checkbox"
+        [id]="'folder-' + folder.id"
+        [checked]="isFolderChecked()"
+        (change)="onFolderCheckboxChange($event)"
+        (click)="$event.stopPropagation()"
+      />
+      <label [for]="'item-' + folder.id"
+        >{{ folder.title }} (id: {{ folder.id }})
+      </label>
+    </div>
+    <span>
+      @if (isExpanded) {
+      <svg width="16" height="16" viewBox="0 0 16 16">
+        <polyline
+          points="4,10 8,6 12,10"
+          fill="none"
+          stroke="black"
+          stroke-width="2"
+        />
+      </svg>
+      } @else {
+      <svg width="16" height="16" viewBox="0 0 16 16">
+        <polyline
+          points="4,6 8,10 12,6"
+          fill="none"
+          stroke="black"
+          stroke-width="2"
+        />
+      </svg>
+      }
+    </span>
+  </div>
+
+  @if (isExpanded) {
+  <div class="folder-content">
+    <!-- child folder: recursively call component for flexibility -->
+    @for (childFolder of folder.childFolders; track childFolder.id) {
+    <app-folder-row
+      [folder]="childFolder"
+      [level]="level + 1"
+      [selectedIds]="selectedIds"
+    ></app-folder-row>
+    } @if (folder.items && folder.items.length > 0) {
+    <!-- items -->
+    <div class="items">
+      @for (item of folder.items; track item.id) {
+      <div class="item" [style.padding-left.px]="(level + 1) * 20">
+        <input
+          type="checkbox"
+          [id]="'item-' + item.id"
+          [checked]="selectedIds.has(item.id)"
+          (change)="onItemCheckboxChange(item.id, $event)"
+        />
+        <label [for]="'item-' + item.id"
+          >{{ item.title }} (id: {{ item.id }})</label
+        >
+      </div>
+      }
+    </div>
+    }
+  </div>
+  }
+</div>

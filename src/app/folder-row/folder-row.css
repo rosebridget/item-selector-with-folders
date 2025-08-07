@@ -1,0 +1,30 @@
+.folder {
+  margin-bottom: 5px;
+}
+
+.folder-row {
+  cursor: pointer;
+  padding: 5px;
+  background-color: #fff;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.folder-header:hover {
+  background-color: #e0e0e0;
+}
+
+.folder-title {
+  padding: 5px;
+  font-weight: bold;
+}
+.item {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.item input {
+  margin-right: 5px;
+}
