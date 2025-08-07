@@ -1,8 +1,9 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
+import { ItemSelectorContainer } from './item-selector-container/item-selector-container';
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [ItemSelectorContainer],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

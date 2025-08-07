@@ -1,5 +1,5 @@
 {
-  "itemSelector": {
+  "itemSelectorData": {
     "folders": {
       "columns": ["id", "title", "parent_id"],
       "data": [
