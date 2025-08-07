@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 
 import { ItemSelector } from './item-selector';
 
@@ -8,12 +10,13 @@ describe('ItemSelector', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ItemSelector]
-    })
-    .compileComponents();
+      imports: [ItemSelector],
+      providers: [provideHttpClient(), provideHttpClientTesting()],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ItemSelector);
     component = fixture.componentInstance;
+    component.selectedIds = new Set<number>();
     fixture.detectChanges();
   });
 
