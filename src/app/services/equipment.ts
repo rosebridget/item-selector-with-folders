@@ -40,7 +40,7 @@ export class Equipment {
       folderMap.set(id, {
         id,
         title: this.titleCasePipe.transform(title),
-        folders: [],
+        childFolders: [],
         items: [],
       });
     });
@@ -50,10 +50,10 @@ export class Equipment {
       const [id, , parentId] = row;
       if (parentId !== null) {
         const parentFolder = folderMap.get(parentId);
-        if (parentFolder && parentFolder.folders) {
+        if (parentFolder && parentFolder.childFolders) {
           const childFolder = folderMap.get(id);
           if (childFolder) {
-            parentFolder.folders.push(childFolder);
+            parentFolder.childFolders.push(childFolder);
           }
         }
       }
@@ -74,7 +74,7 @@ export class Equipment {
 
     // sort them alphabetically by title
     folderMap.forEach((folder) => {
-      folder?.folders?.sort((a: Folder, b: Folder) =>
+      folder?.childFolders?.sort((a: Folder, b: Folder) =>
         a.title.localeCompare(b.title)
       );
       folder?.items?.sort((a: Item, b: Item) => a.title.localeCompare(b.title));
