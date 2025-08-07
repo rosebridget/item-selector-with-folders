@@ -10,9 +10,7 @@
         (change)="onFolderCheckboxChange($event)"
         (click)="$event.stopPropagation()"
       />
-      <label [for]="'item-' + folder.id"
-        >{{ folder.title }} (id: {{ folder.id }})
-      </label>
+      <label [for]="'item-' + folder.id">{{ folder.title }} </label>
     </div>
     <span>
       @if (isExpanded) {
@@ -57,9 +55,7 @@
           [checked]="selectedIds.has(item.id)"
           (change)="onItemCheckboxChange(item.id, $event)"
         />
-        <label [for]="'item-' + item.id"
-          >{{ item.title }} (id: {{ item.id }})</label
-        >
+        <label [for]="'item-' + item.id">{{ item.title }}</label>
       </div>
       }
     </div>
