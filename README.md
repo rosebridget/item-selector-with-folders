@@ -1,6 +1,10 @@
 # Item Selector with Folders
 
-To get started, run:
+This app was created using Angular v20.
+
+I recommend NodeJS version 20+. I used v22.
+
+### To get started, run:
 
 ```bash
 npm install
@@ -9,8 +13,8 @@ npm run dev
 
 This will run:
 
-- the app at `http://localhost:4200/`
-- the [json server](https://www.npmjs.com/package/json-server) at `http://localhost:3000/`
+- the app at [`http://localhost:4200/`](http://localhost:4200/)
+- the [json server](https://www.npmjs.com/package/json-server) at [`http://localhost:3000/`](http://localhost:3000/)
 
 ## Info
 
