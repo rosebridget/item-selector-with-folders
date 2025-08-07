@@ -1,6 +1,5 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ItemSelector } from '../item-selector/item-selector';
-import { Equipment as EquipmentService } from '../services/equipment';
 
 @Component({
   selector: 'app-item-selector-container',
@@ -9,16 +8,13 @@ import { Equipment as EquipmentService } from '../services/equipment';
   styleUrl: './item-selector-container.css',
 })
 export class ItemSelectorContainer {
-  folders: any = [];
-  equipmentService = inject(EquipmentService);
+  selectedIds = new Set<number>();
 
-  ngOnInit() {
-    this.equipmentService.getAllItemSelectorData().subscribe((folders) => {
-      this.folders = folders;
-    });
+  get selectedIdsArray(): number[] {
+    return Array.from(this.selectedIds);
   }
 
-  logFolders() {
-    console.log('HERE', this.folders);
+  clearSelectedIdsArray() {
+    this.selectedIds.clear();
   }
 }

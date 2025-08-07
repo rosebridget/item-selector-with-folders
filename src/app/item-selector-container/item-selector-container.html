@@ -1,5 +1,5 @@
 <div class="container-content">
-  <app-item-selector></app-item-selector>
-  <span>Selected item IDs: </span>
-  <button (click)="logFolders()">Clear selection</button>
+  <app-item-selector [selectedIds]="selectedIds"></app-item-selector>
+  <span>Selected item IDs: {{ selectedIdsArray.join(", ") }}</span>
+  <button (click)="clearSelectedIdsArray()">Clear selection</button>
 </div>
