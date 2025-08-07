@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Inter";
+  src: url(/Inter-VariableFont_opsz,wght.ttf) format("truetype-variations"),
+    url(/Inter-VariableFont_opsz,wght.ttf) format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url(/SourceSansPro-Regular.ttf) format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url(/SourceSansPro-Semibold.ttf) format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url(/SourceSansPro-Bold.ttf) format("truetype");
+  font-weight: 700;
+}
+
+body {
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  background-color: hsl(0, 0%, 96%);
+  font-size: 14px;
+  padding: 1rem;
+}
