@@ -1,5 +1,5 @@
 {
-  "itemSelectorData": {
+  "equipment": {
     "folders": {
       "columns": ["id", "title", "parent_id"],
       "data": [
