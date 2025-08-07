@@ -48,6 +48,15 @@
 
 input[type="checkbox"] {
   accent-color: hsl(213, 97%, 53%);
+  width: 16px;
+  height: 16px;
+  outline: 1px solid #d0d3d7;
+  outline-offset: -1px;
+}
+
+input[type="checkbox"]:checked,
+input[type="checkbox"]:indeterminate {
+  outline-color: hsl(213, 97%, 53%);
 }
 
 .icon-container {

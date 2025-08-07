@@ -14,7 +14,7 @@
         (change)="onFolderCheckboxChange($event)"
         (click)="$event.stopPropagation()"
       />
-      <label [for]="'item-' + folder.id">{{ folder.title }} </label>
+      <label>{{ folder.title }}</label>
     </div>
     <div class="icon-container">
       @if (isExpanded) {
