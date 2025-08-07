@@ -5,6 +5,5 @@ import { ItemSelectorContainer } from './item-selector-container/item-selector-c
   selector: 'app-root',
   imports: [ItemSelectorContainer],
   templateUrl: './app.html',
-  styleUrl: './app.css',
 })
 export class App {}
