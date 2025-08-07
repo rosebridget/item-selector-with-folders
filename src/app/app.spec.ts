@@ -14,10 +14,12 @@ describe('App', () => {
     expect(app).toBeTruthy();
   });
 
-  it('should render title', () => {
+  it('should render a title', () => {
     const fixture = TestBed.createComponent(App);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, item-selector-with-folders');
+    expect(compiled.querySelector('h1')?.textContent).toContain(
+      'Item Selector with Folders'
+    );
   });
 });
