@@ -1,40 +1,26 @@
-# ItemSelectorWithFolders
-
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.4.
+# Item Selector with Folders
 
 ## Development server
 
-To start a local development server, run:
+To get started, run:
 
 ```bash
-ng serve
+npm install
+npm run dev
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+This will run:
 
-## Code scaffolding
+- the app at `http://localhost:4200/`
+- the [json server](https://www.npmjs.com/package/json-server) at `http://localhost:3000/`
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Info
 
-```bash
-ng generate component component-name
-```
+Hello :) Thanks for taking a look at my item selector with folders. This is my first ever Angular project (yay!) and it was really fun to put together. It took about 6-7 hours to complete as I was reading documentation every step of the way. During this time I also followed one of the tutorials on angular.dev (https://angular.dev/tutorials/first-app) which was a great resource, along with the rest of the docs.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+![screencap of the item selector](image.png)
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.4.
 
 ## Running unit tests
 
@@ -44,16 +30,8 @@ To execute unit tests with the [Karma](https://karma-runner.github.io) test runn
 ng test
 ```
 
-## Running end-to-end tests
+## Notes
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- I decided to use the latest version of Angular (v20) for this project. I weighed the pros and cons a bit first; I know that by using the new CLI there are some immediate noticeable differences in the file names, for example (no suffixes: instead of `equipment.service.ts` it's simply `equipment.ts`. for that reason I moved it to a services folder, for clarity). I also know from reading the docs and referencing some older angular discussions online that some of the syntax I use is a bit different than with older versions. For example, `ngFor` vs `@for` though that changed a few versions ago. Still, wanted to make note!
+- Instead of using `response.json` I created a `db.json` file to use json-server. I saw it in the angular tutorial and thought it was cool, so I went for it. :) This meant I had to modify the file by adding a `equipment` property, since the json server is a mock api.
+- This project taught me a ton of new angular concepts, hopefully I didn't mess it all up haha. Thanks again for taking a look!
