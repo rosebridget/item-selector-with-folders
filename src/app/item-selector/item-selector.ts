@@ -15,7 +15,7 @@ export class ItemSelector implements OnInit {
   equipmentService = inject(EquipmentService);
 
   ngOnInit() {
-    this.equipmentService.getAllItemSelectorData().subscribe((folders) => {
+    this.equipmentService.getAllEquipmentData().subscribe((folders) => {
       this.folders = folders;
     });
   }

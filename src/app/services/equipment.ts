@@ -18,7 +18,7 @@ export class Equipment {
   private http = inject(HttpClient);
   private titleCasePipe = new TitleCasePipe();
 
-  getAllItemSelectorData(): Observable<Folder[]> {
+  getAllEquipmentData(): Observable<Folder[]> {
     return this.http
       .get<EquipmentResponse>(`${environment.apiUrl}/equipment`)
       .pipe(
