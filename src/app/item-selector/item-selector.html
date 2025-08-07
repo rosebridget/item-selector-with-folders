@@ -1,1 +1,9 @@
-<div class="selector-content">item-selector works!</div>
+<div class="selector-content">
+  @for (rootFolder of folders; track rootFolder.id) {
+  <app-folder-row
+    [folder]="rootFolder"
+    [level]="0"
+    [selectedIds]="selectedIds"
+  ></app-folder-row>
+  }
+</div>
