@@ -1,7 +1,5 @@
 # Item Selector with Folders
 
-## Development server
-
 To get started, run:
 
 ```bash
@@ -34,4 +32,5 @@ ng test
 
 - I decided to use the latest version of Angular (v20) for this project. I weighed the pros and cons a bit first; I know that by using the new CLI there are some immediate noticeable differences in the file names, for example (no suffixes: instead of `equipment.service.ts` it's simply `equipment.ts`. for that reason I moved it to a services folder, for clarity). I also know from reading the docs and referencing some older angular discussions online that some of the syntax I use is a bit different than with older versions. For example, `ngFor` vs `@for` though that changed a few versions ago. Still, wanted to make note!
 - Instead of using `response.json` I created a `db.json` file to use json-server. I saw it in the angular tutorial and thought it was cool, so I went for it. :) This meant I had to modify the file by adding a `equipment` property, since the json server is a mock api.
-- This project taught me a ton of new angular concepts, hopefully I didn't mess it all up haha. Thanks again for taking a look!
+- What could be expanded upon: better tests, a loading state when fetching data
+- This project taught me a ton of new Angular concepts, hopefully I didn't mess it all up haha. Thanks again for taking a look!
