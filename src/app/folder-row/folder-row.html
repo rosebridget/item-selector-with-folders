@@ -1,6 +1,10 @@
-<div class="folder" [style.padding-left.px]="level * 20">
-  <!-- folder title and svg arrow -->
-  <div class="folder-row" (click)="toggleExpand()">
+<div class="folder">
+  <!-- folder title and svg arrows -->
+  <div
+    class="folder-row"
+    [style.padding-left.px]="level * 20 + 16"
+    (click)="toggleExpand()"
+  >
     <div class="folder-title">
       <input
         #folderCheckbox
@@ -12,27 +16,13 @@
       />
       <label [for]="'item-' + folder.id">{{ folder.title }} </label>
     </div>
-    <span>
+    <div class="icon-container">
       @if (isExpanded) {
-      <svg width="16" height="16" viewBox="0 0 16 16">
-        <polyline
-          points="4,10 8,6 12,10"
-          fill="none"
-          stroke="black"
-          stroke-width="2"
-        />
-      </svg>
+      <img src="/icons/expand_less.svg" alt="Collapse" width="8" height="5" />
       } @else {
-      <svg width="16" height="16" viewBox="0 0 16 16">
-        <polyline
-          points="4,6 8,10 12,6"
-          fill="none"
-          stroke="black"
-          stroke-width="2"
-        />
-      </svg>
+      <img src="/icons/expand_more.svg" alt="Expand" width="8" height="5" />
       }
-    </span>
+    </div>
   </div>
 
   @if (isExpanded) {
@@ -48,7 +38,7 @@
     <!-- items -->
     <div class="items">
       @for (item of folder.items; track item.id) {
-      <div class="item" [style.padding-left.px]="(level + 1) * 20">
+      <div class="item" [style.padding-left.px]="(level + 1) * 20 + 16">
         <input
           type="checkbox"
           [id]="'item-' + item.id"
