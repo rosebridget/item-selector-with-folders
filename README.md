@@ -18,7 +18,7 @@ This will run:
 
 ## Info
 
-Hello :) Thanks for taking a look at my item selector with folders. This is my first ever Angular project (yay!) and it was really fun to put together. It took about 6-7 hours to complete as I was reading documentation every step of the way. During this time I also followed one of the tutorials on angular.dev (https://angular.dev/tutorials/first-app) which was a great resource, along with the rest of the docs.
+Hello :) Thanks for taking a look at my take on the item selector with folders. This is my first ever Angular project (yay!) and it was really fun to put together. It took about 6-7 hours to complete as I was reading documentation every step of the way. During this time I also followed one of the tutorials on angular.dev (https://angular.dev/tutorials/first-app) which was a great resource, along with the rest of the docs.
 
 ![screencap of the item selector](image.png)
 
